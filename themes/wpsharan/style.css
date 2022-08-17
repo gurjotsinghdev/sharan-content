@@ -1,5 +1,5 @@
 /*!
-Theme Name: WP Sharan
+Theme Name: wpsharan
 Theme URI: http://underscores.me/
 Author: Gurjot Singh
 Author URI: http://gurjotsinghdev.vercel.app
@@ -29,5 +29,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # plugins 
 
 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px 25px;
+}
+
+@media only screen and (min-width: 786px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 10px 20vw;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

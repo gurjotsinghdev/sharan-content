@@ -7,34 +7,18 @@ Author: Gurjot Singh
 Author URI: https://gurjotsinghdev.vercel.app
 */
 
-function wp_login_magician() {
-  echo '<style>
-  #login h1, #nav, #backtoblog {
-		  display:none;
-  }
-
-  body {
-  background-image: url("https://source.unsplash.com/random/1920x1080/?wallpaper,landscape");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 20vh;
-
-  }  
-
-  label {
-	color:black;
-  }
-
-  #loginform {
-	background-color: #ffffff60;
-	border-radius: 11px;
-	border: 0.5px solid grey;
-	color: white;
-  }	
-
-  .forgetmenot label {
-	  color:black;
-  </style>';
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
 }
 
-add_action('login_head', 'wp_login_magician');
+/**
+ * Current plugin version.
+ */
+define( 'LOGIN_MAGICIAN_VERSION', '1.0.0' );
+
+function wp_login_magician_assets () {
+  wp_enqueue_style( 'login_magician', plugins_url('/assets/style.css', __FILE__) );
+}
+
+add_action('login_head', 'wp_login_magician_assets');

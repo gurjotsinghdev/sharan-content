@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package WP_Godspeed
+ * @package wpsharan
  */
 
 get_header();
@@ -45,8 +45,8 @@ get_header();
 
 					<?php
 					/* translators: %1$s: smiley */
-					$wp_godspeed_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wp-godspeed' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$wp_godspeed_archive_content" );
+					$wpsharan_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wp-godspeed' ), convert_smilies( ':)' ) ) . '</p>';
+					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$wpsharan_archive_content" );
 
 					the_widget( 'WP_Widget_Tag_Cloud' );
 					?>

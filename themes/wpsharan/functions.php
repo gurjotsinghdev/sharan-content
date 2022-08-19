@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package WP_Godspeed
+ * @package wpsharan
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -19,7 +19,7 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function wp_godspeed_setup() {
+function wpsharan_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
@@ -74,7 +74,7 @@ function wp_godspeed_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'wp_godspeed_custom_background_args',
+			'wpsharan_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -100,7 +100,7 @@ function wp_godspeed_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'wp_godspeed_setup' );
+add_action( 'after_setup_theme', 'wpsharan_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -109,17 +109,17 @@ add_action( 'after_setup_theme', 'wp_godspeed_setup' );
  *
  * @global int $content_width
  */
-function wp_godspeed_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wp_godspeed_content_width', 640 );
+function wpsharan_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'wpsharan_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'wp_godspeed_content_width', 0 );
+add_action( 'after_setup_theme', 'wpsharan_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function wp_godspeed_widgets_init() {
+function wpsharan_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'wp-godspeed' ),
@@ -132,12 +132,12 @@ function wp_godspeed_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'wp_godspeed_widgets_init' );
+add_action( 'widgets_init', 'wpsharan_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function wp_godspeed_scripts() {
+function wpsharan_scripts() {
 	wp_enqueue_style( 'wp-godspeed-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'wp-godspeed-style', 'rtl', 'replace' );
 
@@ -147,7 +147,7 @@ function wp_godspeed_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'wp_godspeed_scripts' );
+add_action( 'wp_enqueue_scripts', 'wpsharan_scripts' );
 
 /**
  * Implement the Custom Header feature.

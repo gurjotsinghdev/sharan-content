@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WP_Godspeed
+ * @package wpsharan
  */
 
 /*
@@ -28,8 +28,8 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$wp_godspeed_comment_count = get_comments_number();
-			if ( '1' === $wp_godspeed_comment_count ) {
+			$wpsharan_comment_count = get_comments_number();
+			if ( '1' === $wpsharan_comment_count ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'wp-godspeed' ),
@@ -38,8 +38,8 @@ if ( post_password_required() ) {
 			} else {
 				printf( 
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $wp_godspeed_comment_count, 'comments title', 'wp-godspeed' ) ),
-					number_format_i18n( $wp_godspeed_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $wpsharan_comment_count, 'comments title', 'wp-godspeed' ) ),
+					number_format_i18n( $wpsharan_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			}

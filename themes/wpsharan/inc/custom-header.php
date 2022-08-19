@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package WP_Godspeed
+ * @package wpsharan
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses wp_godspeed_header_style()
+ * @uses wpsharan_header_style()
  */
-function wp_godspeed_custom_header_setup() {
+function wpsharan_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'wp_godspeed_custom_header_args',
+			'wpsharan_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'wp_godspeed_header_style',
+				'wp-head-callback'   => 'wpsharan_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'wp_godspeed_custom_header_setup' );
+add_action( 'after_setup_theme', 'wpsharan_custom_header_setup' );
 
-if ( ! function_exists( 'wp_godspeed_header_style' ) ) :
+if ( ! function_exists( 'wpsharan_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see wp_godspeed_custom_header_setup().
+	 * @see wpsharan_custom_header_setup().
 	 */
-	function wp_godspeed_header_style() {
+	function wpsharan_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

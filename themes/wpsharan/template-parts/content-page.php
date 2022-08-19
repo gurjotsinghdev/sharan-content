@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WP_Godspeed
+ * @package wpsharan
  */
 
 ?>
@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php wp_godspeed_post_thumbnail(); ?>
+	<?php wpsharan_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package WP_Godspeed
+ * @package wpsharan
  */
 
 /**
@@ -16,7 +16,7 @@
  *
  * @return void
  */
-function wp_godspeed_woocommerce_setup() {
+function wpsharan_woocommerce_setup() {
 	add_theme_support(
 		'woocommerce',
 		array(
@@ -35,14 +35,14 @@ function wp_godspeed_woocommerce_setup() {
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
-add_action( 'after_setup_theme', 'wp_godspeed_woocommerce_setup' );
+add_action( 'after_setup_theme', 'wpsharan_woocommerce_setup' );
 
 /**
  * WooCommerce specific scripts & stylesheets.
  *
  * @return void
  */
-function wp_godspeed_woocommerce_scripts() {
+function wpsharan_woocommerce_scripts() {
 	wp_enqueue_style( 'wp-godspeed-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
@@ -59,7 +59,7 @@ function wp_godspeed_woocommerce_scripts() {
 
 	wp_add_inline_style( 'wp-godspeed-woocommerce-style', $inline_font );
 }
-add_action( 'wp_enqueue_scripts', 'wp_godspeed_woocommerce_scripts' );
+add_action( 'wp_enqueue_scripts', 'wpsharan_woocommerce_scripts' );
 
 /**
  * Disable the default WooCommerce stylesheet.
@@ -77,12 +77,12 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
  * @param  array $classes CSS classes applied to the body tag.
  * @return array $classes modified to include 'woocommerce-active' class.
  */
-function wp_godspeed_woocommerce_active_body_class( $classes ) {
+function wpsharan_woocommerce_active_body_class( $classes ) {
 	$classes[] = 'woocommerce-active';
 
 	return $classes;
 }
-add_filter( 'body_class', 'wp_godspeed_woocommerce_active_body_class' );
+add_filter( 'body_class', 'wpsharan_woocommerce_active_body_class' );
 
 /**
  * Related Products Args.
@@ -90,7 +90,7 @@ add_filter( 'body_class', 'wp_godspeed_woocommerce_active_body_class' );
  * @param array $args related products args.
  * @return array $args related products args.
  */
-function wp_godspeed_woocommerce_related_products_args( $args ) {
+function wpsharan_woocommerce_related_products_args( $args ) {
 	$defaults = array(
 		'posts_per_page' => 3,
 		'columns'        => 3,
@@ -100,7 +100,7 @@ function wp_godspeed_woocommerce_related_products_args( $args ) {
 
 	return $args;
 }
-add_filter( 'woocommerce_output_related_products_args', 'wp_godspeed_woocommerce_related_products_args' );
+add_filter( 'woocommerce_output_related_products_args', 'wpsharan_woocommerce_related_products_args' );
 
 /**
  * Remove default WooCommerce wrapper.
@@ -108,7 +108,7 @@ add_filter( 'woocommerce_output_related_products_args', 'wp_godspeed_woocommerce
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-if ( ! function_exists( 'wp_godspeed_woocommerce_wrapper_before' ) ) {
+if ( ! function_exists( 'wpsharan_woocommerce_wrapper_before' ) ) {
 	/**
 	 * Before Content.
 	 *
@@ -116,15 +116,15 @@ if ( ! function_exists( 'wp_godspeed_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function wp_godspeed_woocommerce_wrapper_before() {
+	function wpsharan_woocommerce_wrapper_before() {
 		?>
 			<main id="primary" class="site-main">
 		<?php
 	}
 }
-add_action( 'woocommerce_before_main_content', 'wp_godspeed_woocommerce_wrapper_before' );
+add_action( 'woocommerce_before_main_content', 'wpsharan_woocommerce_wrapper_before' );
 
-if ( ! function_exists( 'wp_godspeed_woocommerce_wrapper_after' ) ) {
+if ( ! function_exists( 'wpsharan_woocommerce_wrapper_after' ) ) {
 	/**
 	 * After Content.
 	 *
@@ -132,13 +132,13 @@ if ( ! function_exists( 'wp_godspeed_woocommerce_wrapper_after' ) ) {
 	 *
 	 * @return void
 	 */
-	function wp_godspeed_woocommerce_wrapper_after() {
+	function wpsharan_woocommerce_wrapper_after() {
 		?>
 			</main><!-- #main -->
 		<?php
 	}
 }
-add_action( 'woocommerce_after_main_content', 'wp_godspeed_woocommerce_wrapper_after' );
+add_action( 'woocommerce_after_main_content', 'wpsharan_woocommerce_wrapper_after' );
 
 /**
  * Sample implementation of the WooCommerce Mini Cart.
@@ -146,13 +146,13 @@ add_action( 'woocommerce_after_main_content', 'wp_godspeed_woocommerce_wrapper_a
  * You can add the WooCommerce Mini Cart to header.php like so ...
  *
 	<?php
-		if ( function_exists( 'wp_godspeed_woocommerce_header_cart' ) ) {
-			wp_godspeed_woocommerce_header_cart();
+		if ( function_exists( 'wpsharan_woocommerce_header_cart' ) ) {
+			wpsharan_woocommerce_header_cart();
 		}
 	?>
  */
 
-if ( ! function_exists( 'wp_godspeed_woocommerce_cart_link_fragment' ) ) {
+if ( ! function_exists( 'wpsharan_woocommerce_cart_link_fragment' ) ) {
 	/**
 	 * Cart Fragments.
 	 *
@@ -161,17 +161,17 @@ if ( ! function_exists( 'wp_godspeed_woocommerce_cart_link_fragment' ) ) {
 	 * @param array $fragments Fragments to refresh via AJAX.
 	 * @return array Fragments to refresh via AJAX.
 	 */
-	function wp_godspeed_woocommerce_cart_link_fragment( $fragments ) {
+	function wpsharan_woocommerce_cart_link_fragment( $fragments ) {
 		ob_start();
-		wp_godspeed_woocommerce_cart_link();
+		wpsharan_woocommerce_cart_link();
 		$fragments['a.cart-contents'] = ob_get_clean();
 
 		return $fragments;
 	}
 }
-add_filter( 'woocommerce_add_to_cart_fragments', 'wp_godspeed_woocommerce_cart_link_fragment' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'wpsharan_woocommerce_cart_link_fragment' );
 
-if ( ! function_exists( 'wp_godspeed_woocommerce_cart_link' ) ) {
+if ( ! function_exists( 'wpsharan_woocommerce_cart_link' ) ) {
 	/**
 	 * Cart Link.
 	 *
@@ -179,7 +179,7 @@ if ( ! function_exists( 'wp_godspeed_woocommerce_cart_link' ) ) {
 	 *
 	 * @return void
 	 */
-	function wp_godspeed_woocommerce_cart_link() {
+	function wpsharan_woocommerce_cart_link() {
 		?>
 		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'wp-godspeed' ); ?>">
 			<?php
@@ -195,13 +195,13 @@ if ( ! function_exists( 'wp_godspeed_woocommerce_cart_link' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wp_godspeed_woocommerce_header_cart' ) ) {
+if ( ! function_exists( 'wpsharan_woocommerce_header_cart' ) ) {
 	/**
 	 * Display Header Cart.
 	 *
 	 * @return void
 	 */
-	function wp_godspeed_woocommerce_header_cart() {
+	function wpsharan_woocommerce_header_cart() {
 		if ( is_cart() ) {
 			$class = 'current-menu-item';
 		} else {
@@ -210,7 +210,7 @@ if ( ! function_exists( 'wp_godspeed_woocommerce_header_cart' ) ) {
 		?>
 		<ul id="site-header-cart" class="site-header-cart">
 			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php wp_godspeed_woocommerce_cart_link(); ?>
+				<?php wpsharan_woocommerce_cart_link(); ?>
 			</li>
 			<li>
 				<?php

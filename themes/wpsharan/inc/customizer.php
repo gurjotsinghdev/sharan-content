@@ -2,7 +2,7 @@
 /**
  * WP Godspeed Theme Customizer
  *
- * @package WP_Godspeed
+ * @package wpsharan
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function wp_godspeed_customize_register( $wp_customize ) {
+function wpsharan_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -20,26 +20,26 @@ function wp_godspeed_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.site-title a',
-				'render_callback' => 'wp_godspeed_customize_partial_blogname',
+				'render_callback' => 'wpsharan_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
 			'blogdescription',
 			array(
 				'selector'        => '.site-description',
-				'render_callback' => 'wp_godspeed_customize_partial_blogdescription',
+				'render_callback' => 'wpsharan_customize_partial_blogdescription',
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'wp_godspeed_customize_register' );
+add_action( 'customize_register', 'wpsharan_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function wp_godspeed_customize_partial_blogname() {
+function wpsharan_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -48,14 +48,14 @@ function wp_godspeed_customize_partial_blogname() {
  *
  * @return void
  */
-function wp_godspeed_customize_partial_blogdescription() {
+function wpsharan_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function wp_godspeed_customize_preview_js() {
+function wpsharan_customize_preview_js() {
 	wp_enqueue_script( 'wp-godspeed-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
-add_action( 'customize_preview_init', 'wp_godspeed_customize_preview_js' );
+add_action( 'customize_preview_init', 'wpsharan_customize_preview_js' );

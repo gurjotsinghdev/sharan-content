@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package WP_Godspeed
+ * @package wpsharan
  */
 
 get_header();

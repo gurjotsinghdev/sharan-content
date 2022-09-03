@@ -21,26 +21,26 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # globals
 # ui
-# plugins 
+# plugins
 
 */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 10px 25px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin: 10px 25px;
 }
 
 @media only screen and (min-width: 786px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    margin: 10px 20vw;
-  }
-}
 
-/*# sourceMappingURL=style.css.map */
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		margin: 10px 20vw;
+	}
+}

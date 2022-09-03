@@ -1,0 +1,6 @@
+2022-08-20T05:20:30+00:00 CRITICAL Cannot redeclare wp_login_magician_assets() (previously declared in /home/gurjotsingh/Local Sites/wp-godspeed/app/public/wp-content/mu-plugins/login-magician/login-magician.php:20) in /home/gurjotsingh/Local Sites/wp-godspeed/app/public/wp-content/plugins/login-magician/login-magician.php on line 20
+
+2022-08-20T05:20:31+00:00 CRITICAL Cannot redeclare wp_login_magician_assets() (previously declared in /home/gurjotsingh/Local Sites/wp-godspeed/app/public/wp-content/mu-plugins/login-magician/login-magician.php:20) in /home/gurjotsingh/Local Sites/wp-godspeed/app/public/wp-content/plugins/login-magician/login-magician.php on line 20
+
+2022-08-20T05:20:31+00:00 CRITICAL Cannot redeclare wp_login_magician_assets() (previously declared in /home/gurjotsingh/Local Sites/wp-godspeed/app/public/wp-content/mu-plugins/login-magician/login-magician.php:20) in /home/gurjotsingh/Local Sites/wp-godspeed/app/public/wp-content/plugins/login-magician/login-magician.php on line 20
+

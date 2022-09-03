@@ -15,10 +15,11 @@ Version: 1.0.0
 	## header
 	## footer
 
+# TEMPLATE PARTS
+	## hero
 # PAGE TEMPLATES
 	- 
 
-# TEMPLATE PARTS
 
 # PLUGINS
 
@@ -31,6 +32,14 @@ Version: 1.0.0
 
 /* ## global settings */
 
+:root {
+	--primary: #1e90ff;
+	--secondary: #ffffff;
+	--light-bg: #1e90ff20;
+	--custom-black: #000;
+	--custom-white: #fff;
+  }
+
 * {
 	margin: 0;
 	padding: 0;
@@ -38,11 +47,37 @@ Version: 1.0.0
 
 body {
 	overflow-x: hidden !important; 
+	font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
 	text-decoration: none;
 }
+
+h1 {
+	font-size: 35px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+p {
+	font-size: 16px;
+}
+
+img {
+	width: 100%;
+}
+
 
 ul, li {
 	list-style: none;
@@ -179,6 +214,9 @@ ul, li {
 	/*--------------------------------------------------------------
 	> GLOBALS
 	----------------------------------------------------------------*/
+
+	/* >> global settings */
+
 
 	.grid {
 		margin: 25px 10vw;

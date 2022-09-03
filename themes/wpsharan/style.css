@@ -14,12 +14,12 @@ Version: 1.0.0
 	## global settings
 	## header
 	## footer
+	## gutenberg content
 
 # TEMPLATE PARTS
-	## hero
-# PAGE TEMPLATES
-	- 
-
+	## hero-section
+	## blog-section
+	## clients-section
 
 # PLUGINS
 
@@ -97,6 +97,7 @@ ul, li {
 	padding: 25px 20px;
 }
 
+
 /* ## header */
 .logo {
 	grid-column: 1/2;
@@ -112,7 +113,12 @@ ul, li {
 
 
 .menu-items {
-    text-align: start;
+	position: absolute; 
+	right: 25px;
+	top: 130px; 
+	width: 300px;
+	z-index: 2;
+	opacity: 0;
 	padding: 25px;
     list-style: none;
     opacity: 0;
@@ -122,9 +128,8 @@ ul, li {
     border-radius: 5px;
     transform: translateX(-10%);
     transition: transform 100ms ease-in-out, opacity 200ms;
-	margin-right: -30px;
-	margin-top: 55px;
-	width: 150px;
+	width: 150px; 
+
 }
 
 .menu-items li{
@@ -203,7 +208,56 @@ ul, li {
     transform: rotate(-45deg);
 }
 
+/*--------------------------------------------------------------
+# TEMPLATE PARTS
+----------------------------------------------------------------*/
 
+/* ## hero-section */
+
+.hero-section h1, .hero-section p, .hero-section .cta-buttons{
+	grid-column: 1/-1;
+	color: white;
+}
+
+.hero-section{
+	padding: 50px 25px;
+	background-color: var(--primary);
+}
+
+.cta-buttons {
+	display: flex;
+	gap: 10px;
+}
+
+button {
+	padding: 10px 20px;
+	margin-top: 30px;
+	border-radius: 5px;
+	box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+}
+
+button.primary-btn {
+	background-color: var(--primary);
+	color: white;
+	border: 1px solid white;
+}
+
+button.secondary-btn {
+	background-color: var(--secondary);
+	color: black;
+	border: 1px solid var(--secondary);
+
+}
+
+/* ## about-section */
+
+.img-col {
+	grid-column: 1/2;
+}
+
+.info-col {
+	grid-column: 3/4;
+}
 
 /*--------------------------------------------------------------
 > MEDIA QUERY FOR DESKTOP 
@@ -226,6 +280,10 @@ ul, li {
 		padding: 25px 10vw;
 	}
 
+	button {
+		font-size: 20px;
+	}
+
 	/* # header  */
 
 	.ham-menu, .check {
@@ -238,15 +296,36 @@ ul, li {
 		margin: 0;
 		padding: 0;
 		width: unset;
+		position: unset;
+		
 	}
 
-	.menu-items ul{
+	.menu-items {
 		display: flex;		
 	}
 
-	.menu-items ul li{
-		width: 111px;
+	.menu-items li{
+		width: 99px;
 		text-align: center;		
 	}
+
+	/* ## hero section  */
+
+	.hero-section {
+		padding-top: 100px;
+		padding-bottom: 130px;
+
+	}
+
+	.hero-section h1 {
+		padding-bottom: 25px;
+		font-size: 75px;
+	}
+
+	.cta-buttons {
+		gap: 25px;
+	}
+
+	
 
 }

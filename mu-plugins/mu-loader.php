@@ -9,6 +9,8 @@ require(WPMU_PLUGIN_DIR . '/advanced-custom-fields/acf.php');
 // require(WPMU_PLUGIN_DIR . '/woocommerce/woocommerce.php');
 // require(WPMU_PLUGIN_DIR . '/wps-hide-login/wps-hide-login.php');
 // require(WPMU_PLUGIN_DIR . '/login-magician/login-magician.php');
+require(WPMU_PLUGIN_DIR . '/classic-editor/classic-editor.php');
+
 
 
 // DEACTIVATED

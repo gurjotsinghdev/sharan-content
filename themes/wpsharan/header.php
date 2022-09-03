@@ -22,36 +22,30 @@
 
 <body>
 <div id="page" class="site">
-	<header id="header" class="primary-header">
-		<div class="site-branding">
+	<header id="header" class="grid">
+		<div class="logo">
 			<h2 class="logo">wpsharan</h2>
-			
-			<div class="hamburger" onclick="myFunction(this)">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
+		</div>
+		<div class="header-right">
+			<input type="checkbox" name="" id="" class="check">
+			<nav class="header-menu">	
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+					'menu_class'	 => 'menu-items',        
+				)
+			);
+			?>
+			</nav>
+			<div class="ham-menu" >
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
 			</div>
-			<nav class="mobile">
-				
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-			</nav>
-
-			<nav class="desktop">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-			</nav>
 			
+		
+
+		</div>	
 	</header>

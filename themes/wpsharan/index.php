@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<main class="container">
+	<main class="grid">
 		<?php 
         if ( have_posts() ) {
             while ( have_posts() ) {

@@ -11,20 +11,11 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wp-godspeed' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'wp-godspeed' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'wp-godspeed' ), 'wp-godspeed', '<a href="http://gurjotsinghdev.vercel.app">Gurjot Singh</a>' );
-				?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="grid-fw">
+		<div class="section1">section1</div>
+		<div class="section2">section2</div>
+		<div class="section3">section3</div>
+		<div class="section4">section4</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

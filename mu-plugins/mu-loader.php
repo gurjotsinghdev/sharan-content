@@ -2,12 +2,13 @@
 // ** TOTAL (11) **
 
 //  ACTIVATED
+require(WPMU_PLUGIN_DIR . '/which-template-file/which-template-file.php');
+require(WPMU_PLUGIN_DIR . '/advanced-custom-fields/acf.php');
+
 // require(WPMU_PLUGIN_DIR . '/gravityforms/gravityforms.php');
 // require(WPMU_PLUGIN_DIR . '/woocommerce/woocommerce.php');
-// require(WPMU_PLUGIN_DIR . '/advanced-custom-fields/acf.php');
 // require(WPMU_PLUGIN_DIR . '/wps-hide-login/wps-hide-login.php');
 // require(WPMU_PLUGIN_DIR . '/login-magician/login-magician.php');
-require(WPMU_PLUGIN_DIR . '/which-template-file/which-template-file.php');
 
 
 // DEACTIVATED
